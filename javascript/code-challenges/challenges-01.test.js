@@ -156,6 +156,20 @@ Return the resulting output array.
 ------------------------------------------------------------------------------------------------ */
 
 const fizzbuzz = (arr) => {
+  let output = [];
+  arr.forEach(num) => {
+    if (num % 5 === 0 && num % 3 === 0){
+      output.push('Fizz Buzz');
+
+    }
+    else if (num % 5 === 0 ){
+      output.push('buzz')
+    } else if (num % 3 === 0){
+      output.push('Fizz')
+    }else { 
+      output.push(num);
+    }
+  }
   // Solution code here...
 };
 
