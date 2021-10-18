@@ -90,7 +90,7 @@ For example:
 
 const isNum = (input) => {
   let validator = /[0-9]/g;
-  return validator.test(input) // Solution code here...
+  return validator.test(input); // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -216,8 +216,8 @@ describe('Testing challenge 2', () => {
   });
   test('It should return false if the input does not contain a w', () => {
     expect(containsW('hello everyone')).toBe(false);
-  })
-})
+  });
+});
 
 describe('Testing challenge 3', () => {
   test('It should return true if the input is a number', () => {
@@ -243,7 +243,7 @@ describe('Testing challenge 4', () => {
   test('It should return false if the input does not contain the word school', () => {
     expect(containsWorld('hello everyone')).toBe(false);
   });
-})
+});
 
 describe('Testing challenge 5', () => {
   test('It should only return words that begin with a capital letter', () => {
