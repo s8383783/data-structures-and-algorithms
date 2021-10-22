@@ -43,6 +43,10 @@ Write a function named addPurchases that, given an array of objects as input, us
 ------------------------------------------------------------------------------------------------ */
 
 const addPurchases = (arr) => {
+  const totalCost = arr.reduce( (acc, val) => {
+    return acc + val.purchasePrice;
+  }, 0);
+  return totalCost;
   // Solution code here...
 };
 
@@ -118,6 +122,11 @@ let starWarsData = [{
 }];
 
 const returnNames = (arr) => {
+  const names = arr.reduce((acc, val) => {
+    acc.push(val.name);
+    return acc;
+  }, []);
+  return names;
   // Solution code here...
 };
 
@@ -130,6 +139,11 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 ------------------------------------------------------------------------------------------------ */
 
 const reversedString = (str) => {
+  const splitString = str.split('');
+  const newString = splitString.reduce((acc, val) => {
+    return val + acc;
+  }, '');
+  return newString;
   // Solution code here...
 };
 
