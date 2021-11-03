@@ -9,6 +9,10 @@ using the 'reduce' method.
 E.g. [4,2,7,5,9,2] -> 9
 ------------------------------------------------------------------------------------------------ */
 const maxInArray = (arr) => {
+  return arr.reduce( (acc, val)=> {
+    let highNum = Math.max(acc, val);
+    return highNum;
+  }, 0);
   // Solution code here...
 };
 
@@ -25,9 +29,7 @@ const courseInfo = {
   finalExam: true
 };
 
-const getCourseKeys = (obj) => {
-  // Solution code here...
-};
+const getCourseKeys = (obj) => Object.keys(obj);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -120,7 +122,9 @@ const characters = [
 
 const getHouses = (arr) => {
   let houses = [];
-  // Solution code here...
+  arr.forEach(item => {
+    houses.push(item.house);
+  });
   return houses;
 };
 
